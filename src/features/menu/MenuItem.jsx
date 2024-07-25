@@ -1,5 +1,6 @@
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
+  
 
   return (
     <li>
@@ -15,4 +16,11 @@ function MenuItem({ pizza }) {
   );
 }
 
-export default MenuItem;
+function formatCurrency(amount) {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(amount);
+  }
+
+  export default MenuItem;
