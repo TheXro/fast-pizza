@@ -15,8 +15,15 @@ function Home() {
         </span>
       </h1>
 
-      {username === '' ? <CreateUser /> : <Button to="/menu" type="primary" >Continue ordering, {username}</Button> }
+      {username === '' ? (
+        <CreateUser />
+      ) : (
+        <Button to="/menu" type="primary">
+          Continue ordering, {username}
+        </Button>
+      )}
     </div>
   );
 }
+
 export default Home;
